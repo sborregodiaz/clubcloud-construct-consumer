@@ -21,13 +21,14 @@ registry=https://clubcloud-domain-<DOMAIN_ACCOUNT_ID>.d.codeartifact.<REGION>.am
 //clubcloud-domain-<DOMAIN_ACCOUNT_ID>.d.codeartifact.<REGION>.amazonaws.com/npm/clubcloud-npm-platform-constructs/:_authToken=<TOKEN>
 //clubcloud-domain-<DOMAIN_ACCOUNT_ID>.d.codeartifact.<REGION>.amazonaws.com/npm/clubcloud-npm-platform-constructs/:always-auth=true
 ```
-2. Run `npx projen build`
-3. Run `npx projen deploy`
-4. Confirm the deployment of resources
-4. Run `git remote add codecommit codecommit::<REGION>://clubcloud-consumer-app`
-5. Run `git add .`
-6. Run `git commit -m "Initial commit"`
-7. Run `git push codecommit main`
+4. Replace the values of `<DOMAIN_ACCOUNT_ID>` and `<DEV_ACCOUNT_ID>` in `src/pipeline-stack.ts`
+5. Run `npx projen build`
+6. Run `npx projen deploy`
+7. Confirm the deployment of resources
+8. Run `git remote add codecommit codecommit::<REGION>://clubcloud-consumer-app`
+9. Run `git add .`
+10. Run `git commit -m "Initial commit"`
+11. Run `git push codecommit main`
 
 ## Useful links
 * [CDK](https://github.com/aws/aws-cdk)
