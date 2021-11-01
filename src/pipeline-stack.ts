@@ -32,7 +32,7 @@ export class PipelineStack extends cdk.Stack {
       synthAction: pipelines.SimpleSynthAction.standardNpmSynth({
         sourceArtifact,
         cloudAssemblyArtifact,
-        installCommand: `aws codeartifact login --tool npm --repository clubcloud-npm-platform-constructs --domain clubcloud-domain --domain-owner <DOMAIN_ACCOUNT_ID> && yarn install`,
+        installCommand: 'aws codeartifact login --tool npm --repository clubcloud-npm-platform-constructs --domain clubcloud-domain --domain-owner 290794210101 && yarn install',
         buildCommand: 'npx projen build',
         synthCommand: 'npx projen synth',
         rolePolicyStatements: [
@@ -61,7 +61,7 @@ export class PipelineStack extends cdk.Stack {
 
     pipeline.addApplicationStage(new ApplicationStage(this, 'devEnvironment', {
       env: {
-        account: '<DEV_ACCOUNT_ID>',
+        account: '878922350258',
         region: cdk.Aws.REGION,
       },
     }));
